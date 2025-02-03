@@ -65,7 +65,7 @@ variable "file_mode" {
 variable "group_id" {
   type        = number
   description = "(Optional) The default group ID for the file share (unless the files have another group ID specified). Defaults to 65534 (nfsnobody). Valid values: 0 through 4294967294"
-  default     = "65534"
+  default     = "10100"
   validation {
     condition = (
       var.group_id >= 0 &&
@@ -78,7 +78,7 @@ variable "group_id" {
 variable "owner_id" {
   type        = number
   description = "(Optional) The default owner ID for the file share (unless the files have another owner ID specified). Defaults to 65534 (nfsnobody). Valid values: 0 through 4294967294"
-  default     = "65534"
+  default     = "10100"
   validation {
     condition = (
       var.owner_id >= 0 &&
