@@ -12,6 +12,7 @@ resource "aws_storagegateway_nfs_file_share" "nfsshare" {
   audit_destination_arn = var.log_group_arn
   kms_encrypted         = var.kms_encrypted
   kms_key_arn           = var.kms_encrypted ? var.kms_key_arn : null
+  squash                = "NoSquash"
 
   nfs_file_share_defaults {
     directory_mode = var.directory_mode
